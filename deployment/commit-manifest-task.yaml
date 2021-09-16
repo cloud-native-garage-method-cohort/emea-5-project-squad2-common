@@ -110,7 +110,7 @@ spec:
         cd gitops_cd
 
         mkdir -p prod/${NAMESPACE}/${APP_NAME}/
-        cp ../source/k8s/manifests.yaml prod/${NAMESPACE}/${APP_NAME}/
+        cp ../source/deployment/k8s/manifests.yaml prod/${NAMESPACE}/${APP_NAME}/
 
         if [[ $(git status -s | wc -l) -eq 0 ]]; then
           echo "No changes"
